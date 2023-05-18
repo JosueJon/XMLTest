@@ -1,0 +1,39 @@
+Por lo que tengo entendido o como lo puedo ver un Codeunit seria una clase para poder ocuparla en otras partes de codigo 
+al igual que dentro de cada codeunit se pude almacenar como se hace en C# para tener las clases 
+
+Lo que entendi de los namesapces es que se ienen que agregar cada uno 
+° para para el schema prefix -->xs
+° uno ccon cfdi prefix --> cdfi
+° otro de catalodo prefix --> catCFDI
+° otro para tipos de datos prefix --> tdCFDI
+
+ya con eso intentar agregarlo y que aparescan asi mismo intentar agregar 
+° targetNameSpace
+° elemenFormDefault
+° AttributeFormDefault
+
+
+0 – 49.999: Objetos de aplicación base de Business Central (Core) Este rango se asigna para la funcionalidad de la aplicación. ...
+50.000 – 99.999: Desarrollos personalizados Este rango está asignado a todas las personalizaciones que se necesiten realizar en la aplicación por parte del partner. ...
+100.000 – 999.999: Rango de localización para cada país ...
+70.000.000 – 74.999.999: Business Central Apps ...
+
+// -------TODO ------------ //
+Aprender como pasar de un xml a un xslt que es en documento como el siguiente ejemplo;
+        FV|14980|NOV130806SE1|2022-05-17|06:14:37|||FA||||77123C3A-D792-4F58-95DF-B237078A3787
+
+https://www.youtube.com/watch?v=ZByb_HNJQZo
+
+
+LLegamos que en C# se puede usar System.xml.xsl.Transformer PARA TRANSFORMAR EL XML A XLST
+
+Lo entendido que es posible:Se tiene que ponder otro namespace que sea parecido al siguiente:
+    <?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="2.0">
+...
+</xsl: stylesheet>
+
+/----------------------------------------NOTAS PARA AGREGAR UNA INSTANCIA--------------------------------------------------------------------/
+dependencias de los catalogos por si se llega a ocupar 
+"dependencies": [{"id": "31b5bc41-ef4e-4cc7-9189-3ca088de932d","name": "CatalogosSAT","publisher": "TTBS",
+                    "version": "1.0.0.0"}],

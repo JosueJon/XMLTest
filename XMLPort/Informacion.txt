@@ -1,0 +1,6 @@
+Por lo que tengo entendido o como lo puedo ver un Codeunit seria una clase para poder ocuparla en otras partes de codigo 
+al igual que dentro de cada codeunit se pude almacenar como se hace en C# para tener las clases
+
+Hay que enteder si la uri se pueden ocupara para jalar Schemas de xml
+
+Preguntar que es lo que sigue que es lo que tengo que hacer.
