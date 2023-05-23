@@ -1,7 +1,7 @@
 codeunit 50781 "XMLtest2"
 {
     TableNo = "Purchase Header";
-    procedure XMLv4(RecordCurr: Record "Sales Header")
+    procedure XMLv4(RecordCurr: Record "Sales Header")//sd
     var
         v_DaclickparairTP: Page "Sales Invoice"; // esta variable la uso para ir a paginas tablas y ir a referencias 
         v_DaclickparairTP2: Page "Purchase Invoice"; // esta variable la uso para ir a paginas tablas y ir a referencias 
