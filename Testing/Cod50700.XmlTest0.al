@@ -54,7 +54,7 @@ codeunit 50700 ClassXML
         v_TAtt_tdCFDI: XmlAttribute;
         v_TNamespaceP: XmlAttribute;
 
-        
+
 
 
 
@@ -87,7 +87,7 @@ codeunit 50700 ClassXML
         v_XMLDec := XmlDeclaration.Create('1.0', 'UTF-8', 'no');
         v_XMLDoc.SetDeclaration(v_XMLDec);
 
-
+        // ir probando algunos 
         /*prueba iba ver si se podrian usar xml schema con URI-- OBSOLETO*/
 
         v_TAtt_cfdi := XmlAttribute.CreateNamespaceDeclaration('cfdi', 'http://www.sat.gob.mx/cfd/4'); //se crea namespace
