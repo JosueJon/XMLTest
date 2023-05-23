@@ -9,6 +9,8 @@ codeunit 50782 "XMLtest2.1"
         v_salesInformSub: Page "Sales Invoice Subform"; //Specifies the net amount, excluding any invoice discount amount, that must be paid for products on the line.
         v_SalesLine: Record "Sales Line"; //field(29; Amount; Decimal)  //field(30; "Amount Including VAT"; Decimal)
 
+        v_Testv1: Report "Standard Sales - Draft Invoice"; //field(29; Amount; Decimal)  //field(30; "Amount Including VAT"; Decimal)
+
         subtotal: Decimal;
         total: Decimal;
         GuardarDecimal: Decimal;
@@ -106,7 +108,7 @@ codeunit 50782 "XMLtest2.1"
         v_TAtt_xs := XmlAttribute.CreateNamespaceDeclaration('xsi', 'http://www.w3.org/2001/XMLSchema-instance'); //se crea namespace
         v_TAtt_catCFDI := XmlAttribute.CreateNamespaceDeclaration('catCFDI', 'http://www.sat.gob.mx/sitio_internet/cfd/catalogos'); //se crea namespace
         v_TAtt_tdCFDI := XmlAttribute.CreateNamespaceDeclaration('tdCFDI', 'http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI'); //se crea namespace
-        v_schemaLocation := XmlAttribute.CreateNamespaceDeclaration('schemaLocation', 'http://www.sat.gob.mx/cfd/4 http://www.sat.gob.mx/sitio_internet/cfd/4/cfdv40.xsd'); //se crea namespace
+        // v_schemaLocation := XmlAttribute.CreateNamespaceDeclaration('schemaLocation', 'http://www.sat.gob.mx/cfd/4 http://www.sat.gob.mx/sitio_internet/cfd/4/cfdv40.xsd'); //se crea namespace
 
         v_RootNode := XmlElement.Create('comprobante', 'http://www.sat.gob.mx/cfd/4'); //CORRECTO CON NAMESPACE
         v_XMLDoc.Add(v_RootNode);
@@ -116,7 +118,7 @@ codeunit 50782 "XMLtest2.1"
         v_RootNode.Add(v_TAtt_xs);
         v_RootNode.Add(v_TAtt_catCFDI);
         v_RootNode.Add(v_TAtt_tdCFDI);
-        v_RootNode.Add(v_schemaLocation);
+        // v_RootNode.Add(v_schemaLocation);
         v_RootNode.SetAttribute(versionName, versionAttribute);
         v_RootNode.SetAttribute('Serie', v_salesH."Insurer Policy Number");
         v_RootNode.SetAttribute('Folio', 'optional atributo interno');
